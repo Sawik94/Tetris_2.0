@@ -67,6 +67,7 @@ public class Playfield : MonoBehaviour
         {
             if (isRowFull(y))
             {
+                UI.NumberOfRows++;
                 deleteRow(y);
                 decreaseRowsAbove(y + 1);
                 --y;

@@ -9,12 +9,13 @@ public class Spawner : MonoBehaviour
 
     public static int counter = 1;
 
+
     public GameObject randomprefab;
 
 
     public void spawnNext()
     {
-        if (counter % 2 != 0)
+        if (counter % 5 != 0)
         {
 
 

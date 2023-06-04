@@ -26,10 +26,10 @@ public class randomblocks : MonoBehaviour
 
         Coord[,] tab = new Coord[5, 5];
 
-        tab[1, 2]._x = 3;
-        for (int i = 0; i < 5; i++)
+        //tab[1, 2]._x = 3;
+        for (int i = 0; i < 4; i++)
         {
-            for (int j = 0; j < 5; j++)
+            for (int j = 0; j < 4; j++)
             {
                 tab[i, j]._x = 3 + i;
                 tab[i, j]._y = 12 + j;
@@ -39,8 +39,8 @@ public class randomblocks : MonoBehaviour
 
         }
 
-        //int k = Random.Range(5, 10);
-        int k = 3;
+        int k = Random.Range(5, 14);
+        //int k = 3;
         int randx;
         int randy;
         birth(tab[2, 2]._x, tab[2, 2]._y);

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Group : MonoBehaviour
 {
+    private UI _UI;
+    
+
     public bool isValidGridPos()
     {
         foreach (Transform child in transform)
@@ -46,6 +49,14 @@ public class Group : MonoBehaviour
 
     void Start()
     {
+        _UI = GameObject.Find("Score").GetComponent<UI>();
+        if (_UI == null)
+        {
+            Debug.LogError("The UI is NULL");
+        }
+
+
+
         // Default position not valid? Then it's game over
         if (!isValidGridPos())
         {
@@ -120,6 +131,13 @@ public class Group : MonoBehaviour
 
                 // Clear filled horizontal lines
                 Playfield.deleteFullRows();
+                if (_UI != null)
+                {
+                    _UI.updatescore(UI.NumberOfRows);
+                }
+
+
+
 
                 // Spawn next Group
                 FindObjectOfType<Spawner>().spawnNext();
