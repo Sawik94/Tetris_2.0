@@ -8,8 +8,6 @@ public class randomblocks : MonoBehaviour
 
     public GameObject block;
 
-
-
     public struct Coord
     {
         public int _x;
@@ -20,13 +18,11 @@ public class randomblocks : MonoBehaviour
 
 
 
-
     void SpawnRandom()
     {
 
         Coord[,] tab = new Coord[5, 5];
 
-        //tab[1, 2]._x = 3;
         for (int i = 0; i < 4; i++)
         {
             for (int j = 0; j < 4; j++)
@@ -39,8 +35,69 @@ public class randomblocks : MonoBehaviour
 
         }
 
-        int k = Random.Range(5, 14);
-        //int k = 3;
+        int k = Random.Range(1, 3);
+
+        if (k == 1)
+        {
+            k = 0;
+        }
+        else if (k == 2)
+        {
+            k = 1;
+        }
+        else if (k == 3)
+        {
+            k = 2;
+        }
+        else if (k <= 15)
+        {
+            k = 4;
+        }
+        else if (k <= 30)
+        {
+            k = 5;
+        }
+        else if (k <= 44)
+        {
+            k = 6;
+        }
+        else if (k <= 57)
+        {
+            k = 7;
+        }
+        else if (k <= 69)
+        {
+            k = 8;
+        }
+        else if (k <= 80)
+        {
+            k = 9;
+        }
+        else if (k <= 90)
+        {
+            k = 10;
+        }
+        else if (k <= 93)
+        {
+            k = 11;
+        }
+        else if (k <= 96)
+        {
+            k = 12;
+        }
+        else if (k <= 98)
+        {
+            k = 13;
+        }
+        else if (k == 99)
+        {
+            k = 14;
+        }
+        else if (k == 100)
+        {
+            k = 15;
+        }
+
         int randx;
         int randy;
         birth(tab[2, 2]._x, tab[2, 2]._y);
@@ -91,11 +148,6 @@ public class randomblocks : MonoBehaviour
 
 
     }
-
-
-
-
-
 
 
     public void birth(int x, int y)

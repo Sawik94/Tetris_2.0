@@ -12,10 +12,10 @@ public class Spawner : MonoBehaviour
 
     public GameObject randomprefab;
 
-
+   
     public void spawnNext()
     {
-        if (counter % 5 != 0)
+        if (counter % 2 != 0)
         {
 
 
