@@ -23,9 +23,9 @@ public class randomblocks : MonoBehaviour
 
         Coord[,] tab = new Coord[5, 5];
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i <= 4; i++)
         {
-            for (int j = 0; j < 4; j++)
+            for (int j = 0; j <= 4; j++)
             {
                 tab[i, j]._x = 3 + i;
                 tab[i, j]._y = 12 + j;
@@ -35,7 +35,7 @@ public class randomblocks : MonoBehaviour
 
         }
 
-        int k = Random.Range(1, 3);
+        int k = Random.Range(1, 100);
 
         if (k == 1)
         {

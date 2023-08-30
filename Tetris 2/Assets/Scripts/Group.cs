@@ -139,6 +139,9 @@ public class Group : MonoBehaviour
 
 
 
+                FindObjectOfType<Preview>().deleteObject();
+                FindObjectOfType<Preview>().spawnNext();
+
                 // Spawn next Group
                 FindObjectOfType<Spawner>().spawnNext();
 
