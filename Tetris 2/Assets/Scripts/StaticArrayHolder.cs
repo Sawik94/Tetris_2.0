@@ -13,11 +13,11 @@ public class StaticArrayHolder : MonoBehaviour
         public int _tag;
     }
 
-    public static Coord[,] randtab;
+    public static Coord[,] randtab = new Coord[5,5];
 
 
 
-    public Coord[,] CreateRandom()
+    static public Coord[,] CreateRandom()
     {
 
         Coord[,] tab = new Coord[5, 5];
@@ -71,19 +71,19 @@ public class StaticArrayHolder : MonoBehaviour
         {
             k = 8;
         }
-        else if (k <= 80)
+        else if (k <= 94)
         {
             k = 9;
         }
-        else if (k <= 90)
+        else if (k <= 95)
         {
             k = 10;
         }
-        else if (k <= 93)
+        else if (k <= 96)
         {
             k = 11;
         }
-        else if (k <= 96)
+        else if (k <= 97)
         {
             k = 12;
         }

@@ -38,7 +38,7 @@ public class Preview : MonoBehaviour
 
         else
         {
-            
+            StaticArrayHolder.randtab = StaticArrayHolder.CreateRandom();
             blok = Instantiate(randomprefab, transform.position, Quaternion.identity);
    
             counter++;

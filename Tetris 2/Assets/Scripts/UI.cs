@@ -26,7 +26,7 @@ public class UI : MonoBehaviour
                 playerscore += 300;
                 break;
             case 4:
-                playerscore += 1000;
+                playerscore += 1200;
                 break;
         }
         scoretext.text = "Score: " + playerscore.ToString();
