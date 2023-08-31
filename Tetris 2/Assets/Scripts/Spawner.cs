@@ -9,18 +9,17 @@ public class Spawner : MonoBehaviour
 
     public static int counter = 1;
 
-
     public GameObject randomprefab;
 
    
-    public void spawnNext()
+    public void spawnNext(int i)
     {
-        if (counter % 2 != 0)
+        if (counter % Playfield.frequency != 0)
         {
 
 
-            // Random Index
-            int i = Random.Range(0, groups.Length);
+            //// Random Index
+            //int i = Random.Range(0, groups.Length);
 
             // Spawn Group at current Position
             Instantiate(groups[i],
@@ -42,9 +41,9 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-   
+        int j = Random.Range(0, groups.Length);
         // Spawn initial Group
-        spawnNext();
+        spawnNext(j);
     }
 
 

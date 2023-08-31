@@ -136,14 +136,11 @@ public class Group : MonoBehaviour
                     _UI.updatescore(UI.NumberOfRows);
                 }
 
-
-
-
+                // Spawn next Group
+                FindObjectOfType<Spawner>().spawnNext(Preview.number);
                 FindObjectOfType<Preview>().deleteObject();
                 FindObjectOfType<Preview>().spawnNext();
 
-                // Spawn next Group
-                FindObjectOfType<Spawner>().spawnNext();
 
                 // Disable script
                 enabled = false;

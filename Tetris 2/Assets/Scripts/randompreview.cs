@@ -1,12 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class randomblocks : MonoBehaviour
+public class randompreview : MonoBehaviour
 {
-
-
-    public GameObject block;
 
     public struct Coord
     {
@@ -15,6 +11,9 @@ public class randomblocks : MonoBehaviour
         public int _exists;
         public int _tag;
     }
+
+    public GameObject block;
+
 
     Coord[,] CreateRandom()
     {
@@ -25,8 +24,8 @@ public class randomblocks : MonoBehaviour
         {
             for (int j = 0; j <= 4; j++)
             {
-                tab[i, j]._x = 3 + i;
-                tab[i, j]._y = 12 + j;
+                tab[i, j]._x = 11 + i;
+                tab[i, j]._y = 5 + j;
                 tab[i, j]._exists = 0;
                 tab[i, j]._tag = 0;
             }
@@ -98,6 +97,7 @@ public class randomblocks : MonoBehaviour
 
         int randx;
         int randy;
+        //birth(tab[2, 2]._x, tab[2, 2]._y);
         tab[2, 2]._exists = 1;
         tab[2, 1]._tag = 1;
         tab[2, 3]._tag = 1;
@@ -131,6 +131,7 @@ public class randomblocks : MonoBehaviour
                     tab[randx, randy - 1]._tag = 1;
                 }
 
+                //birth(tab[randx, randy]._x, tab[randx, randy]._y);
                 tab[randx, randy]._exists = 1;
 
             }
@@ -156,8 +157,8 @@ public class randomblocks : MonoBehaviour
         //}
 
         return tab;
-    }
 
+    }
 
 
     void SpawnRandom(Coord[,] tab)
@@ -177,8 +178,6 @@ public class randomblocks : MonoBehaviour
         }
     }
 
-
-
     public void birth(int x, int y)
     {
         GameObject segment = Instantiate(this.block);
@@ -190,15 +189,13 @@ public class randomblocks : MonoBehaviour
 
     void Start()
     {
-
-
-    SpawnRandom(CreateRandom());
         
+        SpawnRandom(CreateRandom());
+
     }
 
     void Update()
     {
-        
+
     }
 }
-

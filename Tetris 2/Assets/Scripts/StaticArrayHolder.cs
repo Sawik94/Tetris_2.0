@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class randomblocks : MonoBehaviour
+public class StaticArrayHolder : MonoBehaviour
 {
-
-
-    public GameObject block;
 
     public struct Coord
     {
@@ -16,7 +13,11 @@ public class randomblocks : MonoBehaviour
         public int _tag;
     }
 
-    Coord[,] CreateRandom()
+    public static Coord[,] randtab;
+
+
+
+    public Coord[,] CreateRandom()
     {
 
         Coord[,] tab = new Coord[5, 5];
@@ -25,13 +26,16 @@ public class randomblocks : MonoBehaviour
         {
             for (int j = 0; j <= 4; j++)
             {
-                tab[i, j]._x = 3 + i;
-                tab[i, j]._y = 12 + j;
+                tab[i, j]._x = i;
+                tab[i, j]._y = j;
                 tab[i, j]._exists = 0;
                 tab[i, j]._tag = 0;
             }
 
         }
+
+        int[,] tab2 = new int[5,5];
+
 
         int k = Random.Range(1, 100);
 
@@ -159,41 +163,10 @@ public class randomblocks : MonoBehaviour
     }
 
 
-
-    void SpawnRandom(Coord[,] tab)
-    {
-        for (int z = 0; z <= 4; z++)
-        {
-            for (int s = 0; s <= 4; s++)
-            {
-
-                if (tab[z, s]._exists == 1)
-                {
-                    birth(tab[z, s]._x, tab[z, s]._y);
-                }
-
-            }
-
-        }
-    }
-
-
-
-    public void birth(int x, int y)
-    {
-        GameObject segment = Instantiate(this.block);
-        segment.transform.position = new Vector3(x, y, 0);
-
-        segment.transform.parent = this.transform;
-
-    }
-
     void Start()
     {
 
-
-    SpawnRandom(CreateRandom());
-        
+        randtab = CreateRandom();
     }
 
     void Update()
@@ -201,4 +174,3 @@ public class randomblocks : MonoBehaviour
         
     }
 }
-

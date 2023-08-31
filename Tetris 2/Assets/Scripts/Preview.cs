@@ -7,22 +7,28 @@ public class Preview : MonoBehaviour
 {
     public GameObject[] groups;
 
-    public static int counter = 1;
-
+    public static int counter = 2;
 
     public GameObject randomprefab;
 
     public GameObject blok;
 
+    public static int number;
+
+    public static int i;
+
+
     public void spawnNext()
     {
-        if (counter % 2 != 0)
+
+        i = Random.Range(0, groups.Length);
+        number = i;
+        if (counter % Playfield.frequency != 0)
         {
 
 
             // Random Index
-            int i = Random.Range(0, groups.Length);
-
+            
             // Spawn Group at current Position
             blok = Instantiate(groups[i],
                         transform.position,
@@ -32,9 +38,9 @@ public class Preview : MonoBehaviour
 
         else
         {
-
+            
             blok = Instantiate(randomprefab, transform.position, Quaternion.identity);
-
+   
             counter++;
         }
 
