@@ -26,10 +26,6 @@ public class Preview : MonoBehaviour
         if (counter % Settings.frequency != 0)
         {
 
-
-            // Random Index
-            
-            // Spawn Group at current Position
             blok = Instantiate(groups[i],
                         transform.position,
                         Quaternion.identity);
@@ -57,7 +53,6 @@ public class Preview : MonoBehaviour
     void Start()
     {
 
-        // Spawn initial Group
         counter = 2;
         spawnNext();
     }

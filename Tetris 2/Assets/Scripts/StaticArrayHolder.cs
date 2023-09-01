@@ -145,19 +145,7 @@ public class StaticArrayHolder : MonoBehaviour
 
         }
 
-        //for (int z = 0; z <= 4; z++)
-        //{
-        //    for (int s = 0; s <= 4; s++)
-        //    {
 
-        //        if (tab[z, s]._exists == 1)
-        //        {
-        //            birth(tab[z, s]._x, tab[z, s]._y);
-        //        }
-
-        //    }
-
-        //}
 
         return tab;
     }

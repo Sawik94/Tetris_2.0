@@ -9,13 +9,25 @@ public class ReturnToMenu : MonoBehaviour
 
     public Button gameoverbutton;
     static public GameObject canvasObject;
-    
+    public Button savescorebutton;
+   
+
 
     void Start()
     {
-        //canvasObject.SetActive(false);
+   
         gameoverbutton.onClick.AddListener(ReturnToMainMenu);
+        savescorebutton.onClick.AddListener(savescore);
     }
+
+
+    public void savescore()
+    {
+        //ScoreManager.AddScore(new Score("jan", UI.playerscore));
+        savescorebutton.interactable = false;
+    }
+
+
 
     public void showgameover()
     {

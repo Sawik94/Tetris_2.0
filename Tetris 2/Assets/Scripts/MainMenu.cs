@@ -25,7 +25,7 @@ public class MainMenu : MonoBehaviour
     private void ShowScoreboard()
     {
 
-        SceneManager.LoadScene("Tetris");
+        SceneManager.LoadScene("Scoreboard");
     }
 
     private void ShowSettings()

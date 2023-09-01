@@ -6,7 +6,7 @@ using TMPro;
 
 public class UI : MonoBehaviour
 {
-    [SerializeField] private int playerscore;
+    [SerializeField] public static int playerscore;
     [SerializeField] private TMP_Text scoretext;
     [SerializeField] public Canvas gameoverscreen;
 

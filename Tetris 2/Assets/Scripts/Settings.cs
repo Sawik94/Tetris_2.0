@@ -18,13 +18,6 @@ public class Settings : MonoBehaviour
 
  
 
-    //public void AdjustFrequency(float newfrequency)
-    //{
-    //    int intnewfrequency = (int)newfrequency;
-    //    PlayerPrefs.SetInt("Frequency", intnewfrequency);
-    //    frequency = PlayerPrefs.GetInt("Frequency");
-    //}
-
     private void Back()
     {
 
@@ -50,8 +43,6 @@ public class Settings : MonoBehaviour
 
     void Start()
     {
-        //slider.value = PlayerPrefs.GetInt("Frequency", 4);
-        //frequency = PlayerPrefs.GetInt("Frequency");
         slider.value = 3;
         frequency = 3;
         BackButton.onClick.AddListener(Back);

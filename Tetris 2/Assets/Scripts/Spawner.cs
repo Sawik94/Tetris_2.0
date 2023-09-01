@@ -18,10 +18,7 @@ public class Spawner : MonoBehaviour
         {
 
 
-            //// Random Index
-            //int i = Random.Range(0, groups.Length);
 
-            // Spawn Group at current Position
             Instantiate(groups[i],
                         transform.position,
                         Quaternion.identity);
@@ -43,7 +40,7 @@ public class Spawner : MonoBehaviour
     {
         counter = 1;
         int j = Random.Range(0, groups.Length);
-        // Spawn initial Group
+
         spawnNext(j);
     }
 
