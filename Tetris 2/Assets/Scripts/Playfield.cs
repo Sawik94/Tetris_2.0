@@ -7,7 +7,7 @@ public class Playfield : MonoBehaviour
     public static int w = 10;
     public static int h = 20;
     public static Transform[,] grid = new Transform[w, h];
-    public static int frequency = 3;
+    
 
     public static int[,] tab;
 

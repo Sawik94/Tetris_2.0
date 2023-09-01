@@ -5,7 +5,6 @@ using UnityEngine;
 public class Group : MonoBehaviour
 {
     private UI _UI;
-    
 
     public bool isValidGridPos()
     {
@@ -60,8 +59,10 @@ public class Group : MonoBehaviour
         // Default position not valid? Then it's game over
         if (!isValidGridPos())
         {
-            Debug.Log("GAME OVER");
+            UI.gameoverswitch = 1;
+            Debug.Log("GAME OVER: " + UI.gameoverswitch);
             Destroy(gameObject);
+
         }
     }
 

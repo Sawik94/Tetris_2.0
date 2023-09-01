@@ -23,7 +23,7 @@ public class Preview : MonoBehaviour
 
         i = Random.Range(0, groups.Length);
         number = i;
-        if (counter % Playfield.frequency != 0)
+        if (counter % Settings.frequency != 0)
         {
 
 
@@ -58,6 +58,7 @@ public class Preview : MonoBehaviour
     {
 
         // Spawn initial Group
+        counter = 2;
         spawnNext();
     }
 

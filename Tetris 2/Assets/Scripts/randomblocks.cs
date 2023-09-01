@@ -7,6 +7,7 @@ public class randomblocks : MonoBehaviour
 
 
     public GameObject block;
+  
 
     void SpawnRandom(StaticArrayHolder.Coord[,] tab)
     {
@@ -17,7 +18,7 @@ public class randomblocks : MonoBehaviour
 
                 if (tab[z, s]._exists == 1)
                 {
-                    birth(tab[z, s]._x+3, tab[z, s]._y+14);
+                    birth(tab[z, s]._x+3, tab[z, s]._y+15);
                 }
 
             }

@@ -8,9 +8,10 @@ public class UI : MonoBehaviour
 {
     [SerializeField] private int playerscore;
     [SerializeField] private TMP_Text scoretext;
+    [SerializeField] public Canvas gameoverscreen;
 
     public static int NumberOfRows = 0;
-
+    public static int gameoverswitch = 0;
 
     public void updatescore(int n)
     {
@@ -18,6 +19,7 @@ public class UI : MonoBehaviour
         {
             case 1:
                 playerscore += 40;
+                
                 break;
             case 2:
                 playerscore += 100;
@@ -37,9 +39,19 @@ public class UI : MonoBehaviour
         scoretext.text = "Score: " + playerscore.ToString();
     }
 
-    // Update is called once per frame
+ 
+
+
     void Update()
     {
+
         NumberOfRows = 0;
+        if (gameoverswitch == 1)
+        {
+            gameoverscreen.enabled = true;
+            gameoverswitch = 0;
+        }
+
+
     }
 }

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class Spawner : MonoBehaviour
 {
@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour
    
     public void spawnNext(int i)
     {
-        if (counter % Playfield.frequency != 0)
+        if (counter % Settings.frequency != 0)
         {
 
 
@@ -41,6 +41,7 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
+        counter = 1;
         int j = Random.Range(0, groups.Length);
         // Spawn initial Group
         spawnNext(j);
